@@ -7,7 +7,7 @@
  * length of time.
  * 
  */
-#include "Arduino.h"
+//#include "Arduino.h"
 #ifndef PWM_RampLinear_h
 #define PWM_RampLinear_h
 
