@@ -38,6 +38,7 @@ class PWM_RampLinear{
         uint16_t _duration;
         // Although _elapsedMillis should never get larger than _duration,
         // it MUST be big enough to hold (_elapsedMillis * _changeValue)
+        // ALSO, _changeValue will be NEGATIVE if ramping down.
         int32_t _elapsedMillis;
         uint32_t _prevMillis;
 
