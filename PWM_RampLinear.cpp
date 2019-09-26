@@ -1,4 +1,4 @@
-/* PWM_Fade.cpp - Library Source file
+/* PWM_RampLinear.cpp - Library Source file
  *
  * by Kevin W. <aj2004@shaw.ca>
  *
