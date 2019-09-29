@@ -40,6 +40,7 @@ void PWM_RampLinear::ramp(uint8_t targValue, uint16_t duration){
 void PWM_RampLinear::update(void){
     // if the ramping is not active, just exit
     if (_isRamping == false){
+        rampDoneOS = false;
         return;
     }
     else{
@@ -60,6 +61,7 @@ void PWM_RampLinear::update(void){
             _currValue = _targValue;
             // Unlatch the flag
             _isRamping = false;
+            rampDoneOS = true;
         }
         // as long as ramping is active, write to the output, otherwise don't bother wasting resources
         analogWrite(_pin, _currValue);

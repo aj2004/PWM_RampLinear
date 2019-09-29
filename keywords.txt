@@ -1,4 +1,5 @@
 PWM_RampLinear	KEYWORD1
 
-ramp KEYWORD1
-update KEYWORD1
+ramp KEYWORD2
+update KEYWORD2
+rampDoneOS KEYWORD2

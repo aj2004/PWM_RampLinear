@@ -18,17 +18,13 @@ class PWM_RampLinear{
         PWM_RampLinear (uint8_t pin);
         void ramp(uint8_t targValue, uint16_t duration);
         void update(void);
+
+        bool rampDoneOS;
         
         
     private:
         bool _isRamping;
         uint8_t _pin;
-
-        /*uint8_t _currValue;
-        uint8_t _targValue;
-        uint8_t _prevValue;
-        int16_t _changeValue;
-	uint16_t _duration;*/
 
         uint8_t _currValue;
         uint8_t _targValue;
