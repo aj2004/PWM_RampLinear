@@ -18,7 +18,7 @@ class PWM_RampLinear{
         PWM_RampLinear (uint8_t pin);
         void ramp(uint8_t targValue, uint16_t duration);
         void update(void);
-
+        // this is a one-shot DONE bit
         bool rampDoneOS;
         
         
