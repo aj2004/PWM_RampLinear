@@ -19,6 +19,7 @@ PWM_RampLinear::PWM_RampLinear (uint8_t pin){
 }
 
 void PWM_RampLinear::ramp(uint8_t targValue, uint16_t duration){
+    
     if (_isRamping == false){
 
         // If the ramping process is not already active, map the new values
@@ -36,6 +37,7 @@ void PWM_RampLinear::ramp(uint8_t targValue, uint16_t duration){
         _prevMillis = millis();
         // Latch/set the flag to prevent this code from running again until ramping is done
         _isRamping = true;
+        
 
     }
 }
@@ -62,6 +64,7 @@ void PWM_RampLinear::update(void){
             _currValue = _targValue;
             // Unlatch the flag
             _isRamping = false;
+            
             // Turn on a one-shot DONE bit
             rampDoneOS = true;
         }
