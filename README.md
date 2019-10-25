@@ -5,7 +5,7 @@ by aj2004
 
 Original   : September 2, 2019
 
-Last update: October 4, 2019
+Last update: October 21, 2019
 
 This library will linearly ramp a value to a given point over a given time and will update once per scan/loop.
 Every time update() is called, the new 8-bit value is calculated by dividing the milliseconds elapsed since the ramp() function was called by the desired ramp duration, which equals the completed percentage of the ramp, and multiplying by the amount to change. This result is the amount to change for this iteration. Add this to the original value to get the new value.
